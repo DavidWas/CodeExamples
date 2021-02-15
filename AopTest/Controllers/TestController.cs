@@ -12,18 +12,19 @@ namespace AopTest.Controllers
     [Route("api/[controller]")]
     public class TestController : ControllerBase
     {
+        [LogCall]
         [HttpGet(nameof(Test))]
         public async Task<IActionResult> Test()
         {
-            DoStuff();
+            Console.WriteLine("Running Controller Method...");
             return new OkObjectResult(true);
         }
 
 
-        [TestInterceptor]
-        public virtual void DoStuff()
-        {
-            Console.WriteLine("I do stuff");
-        }
+        // [TestInterceptor]
+        // public virtual void DoStuff()
+        // {
+        //     Console.WriteLine("I do stuff");
+        // }
     }
 }

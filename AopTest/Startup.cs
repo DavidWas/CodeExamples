@@ -20,7 +20,7 @@ namespace AopTest
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers().AddControllersAsServices();
-            services.ConfigureAop(i => i.GlobalInterceptors.Add(new TestInterceptorAttribute()));
+            //services.ConfigureAop(i => i.GlobalInterceptors.Add(new TestInterceptorAttribute()));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AopTest", Version = "v1" });
