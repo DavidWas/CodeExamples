@@ -21,7 +21,7 @@ namespace AopTest.Controllers
 
 
         [TestInterceptor]
-        public void DoStuff()
+        public virtual void DoStuff()
         {
             Console.WriteLine("I do stuff");
         }
